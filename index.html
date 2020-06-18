@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <tittle> Login and Register Form</tittle>
+        <link href= "style1.css" rel = "stylesheet"  type = "text/css">
+    </head>
+<body>
+
+
+
+
+
+
+
+    <div class = "tab-content">
+        <div class = "form-box">
+            
+           
+            <div class = "button-box">
+                <div id="btn"></div> <!-- This section is to create a toggle function to swap between register and login-->
+                <button type ="button " class= "toggle-btn" onclick="login()"> Log In </button> 
+                <button type ="button " class= "toggle-btn" onclick="register()"> Register </button>
+            </div>
+            <form  action = "Login.php" method = "POST" id="login" class = "input-group">
+                <h4>Welcome Back!</h4>
+                <input type= "text"  name = "UserID"class="input-field" placeholder="User ID" required> <!-- Create a user Id  required-->
+                <input type= "password"  name = "password" class="input-field" placeholder="Password" required> <!-- Create a user pass  required-->
+                <span class ="psw"> Forget <a href="#">password?</a></span> <!-- This is for forget password, when some1 click it it will appear another page.-->
+               
+               
+                  <input type="submit" class = "submit-btn" value = "Login">
+               
+               
+            </form>
+            
+           
+            <form action = "connect.php" method = "POST" id="register" class="input-group">
+                <h4>Please fill out section below to register</h4>
+                <input type= "ID"  name = "ID" class="input-field" placeholder="Enter ID" required> <!-- Create a user pass  required-->
+                
+                <input type= "password"  name = "password" class="input-field" placeholder="Enter Password" required> <!-- Create a user pass  required-->
+                
+                <input type= "password2" name = "password2" class="input-field" placeholder="Confirm Password" required>
+               
+                <input type="submit" class = "submit-btn" value = "Register">
+            </form>
+            
+
+        </div>
+        
+    </div>
+<script>
+    /* to make the login/ register on top switch ( toggle ) when we click on it */
+    var x = document.getElementById("login"); 
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register()
+    {
+        x.style.left= "-400px";
+        y.style.left= "50px";
+        z.style.left= "110px";
+    }
+
+    function login()
+    {
+        x.style.left= "50px";
+        y.style.left= "450px";
+        z.style.left= "0px";
+    }
+</script>
+
+
+</body>
+
+
+</html>
